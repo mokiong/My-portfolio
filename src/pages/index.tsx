@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import { About } from '../components/About';
+import { Contact } from '../components/Contact';
 import { Container } from '../components/Container';
 import { SkillGlobe } from '../components/SkillGlobe';
 import { Welcome } from '../components/Welcome';
+import { Works } from '../components/Works';
 
 const SKILLS = [
     'javascript',
@@ -32,6 +34,8 @@ const Home: NextPage = () => {
         <Container backgroundColor="brand.tertiary-light">
             <Welcome />
             <About />
+            <Works />
+            <Contact />
         </Container>
     );
 };

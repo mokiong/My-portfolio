@@ -4,13 +4,19 @@ import { SkillGlobe } from './SkillGlobe';
 
 export const About = () => {
     return (
-        <Flex padding="2rem" gridColumnGap="2rem">
+        <Flex
+            id="about"
+            alignItems="center"
+            height="100vh"
+            padding="1rem"
+            gridColumnGap="2rem"
+        >
             <Flex
                 justifyContent="center"
                 width="40%"
                 flexGrow={1}
                 direction="column"
-                marginTop="6rem"
+                marginTop="25rem"
                 gridRowGap="2rem"
             >
                 <Heading as="h1" fontSize={FONT_SIZE.heading}>

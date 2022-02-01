@@ -2,13 +2,20 @@ import { Text, Flex, Box, UnorderedList, ListItem } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import { BsGithub, BsTwitter, BsFacebook } from 'react-icons/bs';
 import { FONT_SIZE } from '../constants';
+import { Link } from './Link';
 
 const SocialMediaIcons = () => {
     return (
         <Flex gridColumnGap="2rem" justifyContent="center">
-            <BsFacebook size="2rem" />
-            <BsTwitter size="2rem" />
-            <BsGithub size="2rem" />
+            <Link isExternal to="https://www.facebook.com/mokiongggg/">
+                <BsFacebook size="2rem" />
+            </Link>
+            <Link isExternal to="https://twitter.com/mokiong">
+                <BsTwitter size="2rem" />
+            </Link>
+            <Link isExternal to="https://github.com/mokiong/">
+                <BsGithub size="2rem" />
+            </Link>
         </Flex>
     );
 };
@@ -54,9 +61,15 @@ export const Sidebar = () => {
                     spacing="4rem"
                     styleType="none"
                 >
-                    <ListItem>About</ListItem>
-                    <ListItem>Works</ListItem>
-                    <ListItem>Contact</ListItem>
+                    <ListItem>
+                        <Link to="/#about">About</Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link to="/#works">Works</Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link to="/#contact">Contact</Link>
+                    </ListItem>
                 </UnorderedList>
 
                 <SocialMediaIcons />

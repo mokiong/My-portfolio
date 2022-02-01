@@ -5,9 +5,11 @@ import {
     SimpleGrid,
     Text,
     transition,
+    chakra,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import NextImage from 'next/image';
+import { Link } from './Link';
 
 const MotionFlex = motion(Flex);
 const MotionText = motion(Text);
@@ -78,7 +80,12 @@ export const Welcome = () => {
                     fontFamily="heading"
                     fontSize="5rem"
                 >
-                    Feel free to explore!
+                    Feel free to
+                    <chakra.span>
+                        <Link to="#works" color="brand.primary">
+                            &nbsp;explore!
+                        </Link>
+                    </chakra.span>
                 </MotionText>
             </Flex>
             <MotionFlex
