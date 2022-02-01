@@ -81,11 +81,14 @@ export const Welcome = () => {
                     Feel free to explore!
                 </MotionText>
             </Flex>
-            <Flex
+            <MotionFlex
                 direction="column"
                 justifyContent="center"
                 alignItems="center"
                 gridRowGap="3rem"
+                variants={descriptionVariant}
+                initial="hidden"
+                animate="visible"
             >
                 <Box width="80%">
                     <NextImage
@@ -99,7 +102,7 @@ export const Welcome = () => {
                 <Text fontFamily="heading" fontSize="3rem">
                     Latest project
                 </Text>
-            </Flex>
+            </MotionFlex>
         </SimpleGrid>
     );
 };
