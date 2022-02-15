@@ -28,6 +28,7 @@ export const Sidebar = () => {
             width="25rem"
             backgroundColor="brand.tertiary"
             height="100vh"
+            display={{ base: 'none', md: 'flex' }}
         >
             <Flex direction="column" padding="2rem">
                 <Flex gridRowGap="2rem" direction="column" alignItems="center">

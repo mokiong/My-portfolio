@@ -80,7 +80,7 @@ const SkillText = ({
             textTransform="uppercase"
             fontWeight="bold"
             position="absolute"
-            fontSize="2.5rem"
+            fontSize={{ base: '1.8rem', md: '2.5rem' }}
             color="brand.primary"
             top={`${top}%`}
             left={`${left}%`}
@@ -101,7 +101,11 @@ const SkillText = ({
 
 export const SkillGlobe = () => {
     return (
-        <Flex position="relative" height="60rem" width="100%">
+        <Flex
+            position="relative"
+            height={{ base: '40rem', md: '50rem', lg: '60rem' }}
+            width={{ base: '85%', lg: '100%' }}
+        >
             <SkillText
                 top={50}
                 left={10}

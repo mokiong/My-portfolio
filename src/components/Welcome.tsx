@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import NextImage from 'next/image';
+import { FONT_SIZE } from '../constants';
 import { Link } from './Link';
 
 const MotionFlex = motion(Flex);
@@ -55,8 +56,16 @@ const WELCOME_TEXT = 'Welcome!';
 
 export const Welcome = () => {
     return (
-        <SimpleGrid height="100vh" columns={2}>
-            <Flex justifyContent="center" direction="column">
+        <SimpleGrid
+            height={{ base: 'min-content', lg: '100vh' }}
+            columns={{ base: 1, lg: 2 }}
+            gridRowGap="2rem"
+        >
+            <Flex
+                alignItems={{ base: 'center', lg: 'start' }}
+                justifyContent="center"
+                direction="column"
+            >
                 <MotionFlex
                     variants={containerVariant}
                     initial="hidden"
@@ -67,7 +76,8 @@ export const Welcome = () => {
                             variants={letterVariant}
                             fontFamily="heading"
                             key={index}
-                            fontSize="10rem"
+                            fontSize={FONT_SIZE.heading}
+                            fontWeight="bold"
                         >
                             {character}
                         </MotionText>
@@ -78,7 +88,7 @@ export const Welcome = () => {
                     initial="hidden"
                     animate="visible"
                     fontFamily="heading"
-                    fontSize="5rem"
+                    fontSize={FONT_SIZE.textDescription}
                 >
                     Feel free to
                     <chakra.span>

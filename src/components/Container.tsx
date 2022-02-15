@@ -12,7 +12,7 @@ export const Container = ({
     ...props
 }: ContainerProps) => {
     return (
-        <Box paddingLeft="25rem" {...props}>
+        <Box {...props}>
             <Box marginX="auto" maxWidth={isFullWidth ? 'none' : '1400px'}>
                 {children}
             </Box>

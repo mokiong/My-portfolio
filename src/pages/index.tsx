@@ -1,3 +1,4 @@
+import { Box, Flex } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
@@ -31,11 +32,21 @@ const SKILLS = [
 
 const Home: NextPage = () => {
     return (
-        <Container backgroundColor="brand.tertiary-light">
-            <Welcome />
-            <About />
-            <Works />
-            <Contact />
+        <Container
+            paddingTop={{ base: '7rem', md: '0px' }}
+            paddingLeft={{ base: '0px', md: '25rem' }}
+            backgroundColor="brand.tertiary-light"
+        >
+            <Flex
+                direction="column"
+                gridRowGap={{ base: '5rem', lg: '0px' }}
+                padding="1rem"
+            >
+                <Welcome />
+                <About />
+                <Works />
+                <Contact />
+            </Flex>
         </Container>
     );
 };

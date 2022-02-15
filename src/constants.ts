@@ -14,6 +14,6 @@ export const COLORS = {
 };
 
 export const FONT_SIZE = {
-    heading: { base: '5rem', md: '5rem', lg: '5rem' },
-    textDescription: { base: '2rem', md: '2rem', lg: '2rem' },
+    heading: { base: '6rem', md: '8rem', lg: '10rem' },
+    textDescription: { base: '2rem', md: '3rem', lg: '5rem' },
 };
